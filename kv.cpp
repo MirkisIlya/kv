@@ -128,7 +128,7 @@ void Clear_Buffer ()
     while (getchar() != '\n') {;}
 }
 
-void Buffer_Clear_Test (double a, double b, double c)
+void Buffer_Clear_Test (double* a, double* b, double* c)
 {
     bool OK = false;
     while (OK == false)
@@ -150,7 +150,7 @@ int main ()
     int nFails = Unit_Test();
     printf ("\n\n%d Fail(s)\n", nFails);
     printf("\nEnter a, b and c:\n");
-    Buffer_Clear_Test (a, b, c);
+    Buffer_Clear_Test (&a, &b, &c);
     int nRoots = SolveSquare (a, b, c, &x1, &x2);
     Print_Roots (nRoots, &x1, &x2);
 
