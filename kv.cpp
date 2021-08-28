@@ -133,7 +133,7 @@ void Buffer_Clear_Test (double* a, double* b, double* c)
     bool OK = false;
     while (OK == false)
     {
-        int nInput_Numbers = scanf("%lg %lg %lg", &a, &b, &c);
+        int nInput_Numbers = scanf ("%lg %lg %lg", a, b, c);
         if (nInput_Numbers < 3)
         {
             printf ("Please, enter numbers:\n");
@@ -146,7 +146,7 @@ void Buffer_Clear_Test (double* a, double* b, double* c)
 
 int main ()
 {
-    double a = NAN, b = 0, c = 0, x1 = 0, x2 = 0;
+    double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
     int nFails = Unit_Test();
     printf ("\n\n%d Fail(s)\n", nFails);
     printf("\nEnter a, b and c:\n");
