@@ -62,23 +62,23 @@ void Print_Roots (int Number_of_Roots, double* x1, double* x2)
     switch (Number_of_Roots)
     {
         case 0:
-            printf("No solutions\n\n");
+            printf("\nNo solutions\n\n");
             break;
 
         case 1:
-            printf("x1 = x2 = x = %lg\n\n", *x1);
+            printf("\nx1 = x2 = x = %lg\n\n", *x1);
             break;
 
         case 2:
-            printf("x1 = %f\nx2 = %lg\n\n", *x1, *x2);
+            printf("\nx1 = %f\nx2 = %lg\n\n", *x1, *x2);
             break;
 
         case 3:
-            printf("Any number\n\n");
+            printf("\nAny number\n\n");
             break;
 
         default:
-            printf("Error");
+            printf("\nError");
             break;
     }
 
@@ -103,24 +103,9 @@ int Unit_Solve_Square_Test (int Test_Number, double a, double b, double c, int n
 }
 
 
-int Unit_Test ()
-{
-    int failed = 0;
-//                                 #      a      b     c   nRoots x1    x2
-    if (Unit_Solve_Square_Test(    1,     1,    -3,    2,    2,    1,    2) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    2,     1,    -5,    4,    2,    1,    4) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    3,     1,    -5,    6,    2,    2,    3) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    4,     2,    -5,    2,    2,  0.5,    2) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    5,     1,    -9,    8,    2,    1,    7) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    6,     1,    -3,    4,    0,    0,    0) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    7,     1,    -4,    4,    1,    2,    0) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    8,     0,    -3,    3,    1,    1,    0) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    9,     0,     0,    1,    0,    0,    0) == 0) failed++ ;
-    if (Unit_Solve_Square_Test(    10,    0,     0,    0,    3,    0,    0) == 0) failed++ ;
+int Unit_Test ();
 
-    return failed;
-
-}
+#include "test.h"
 
 
 void Clear_Buffer ()
